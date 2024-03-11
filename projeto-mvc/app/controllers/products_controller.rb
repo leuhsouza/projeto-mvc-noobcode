@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit ,:update]
+  before_action :set_product, only: [:show, :edit ,:update, :destroy]
   def index
     @products = Product.all
   end
@@ -14,7 +14,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     if @product.save
       redirect_to products_url
-    else
+    else1
       render :new, status: :unprocessable_entity
 
     end
@@ -30,6 +30,13 @@ class ProductsController < ApplicationController
     end
     end
 
+  def destroy
+    if @product.destroy
+      redirect_to products_url
+    else
+      redirect_to @product
+    end
+  end
 
   private
   def set_product

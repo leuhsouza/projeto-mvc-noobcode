@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   # get 'products/:id', to: "products#show"
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "products#index"
 end
