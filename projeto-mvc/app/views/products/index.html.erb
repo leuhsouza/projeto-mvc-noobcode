@@ -4,5 +4,6 @@
   <p> <%= product.price %> </p>
   <p> <%= product.quantity %> </p>
   <%= link_to "ver produto", product %>
+  <%= link_to "editar produto", edit_product_path(product)  %>
   <%#= link_to "ver produto", "products/#{product.id}" %>
 <% end %>

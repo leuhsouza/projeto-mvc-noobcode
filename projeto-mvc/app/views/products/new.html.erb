@@ -1,11 +1,5 @@
-<%= form_with(model: @product) do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <%= form.label :quantity %>
-  <%= form.number_field :quantity %>
-  <%= form.label :price %>
-  <%= form.number_field :price %>
+<%= render 'product' %>
 
-  <%= form.submit 'salvar' %>
-  <%= link_to "voltar", products_path %>
-<%end %>
+<div>
+    <%= link_to "voltar", products_path %>
+</div>
